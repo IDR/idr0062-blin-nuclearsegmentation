@@ -1,0 +1,2 @@
+"Source Name"	"Assay Name"	"Dataset Name"	"Image File"	"Comment [Image File Path]"	"Comment [Image File Comments]"	"Segmented Image"	"Segmented Channel"	"Segmentation Method"
+"130520_Neural_Rosettes_Manual.tif"	"neural"	"DISCEPTS"	"130520_Neural_Rosettes_Manual.tif "	"/Neural/130520_Neural_Rosettes_Manual.tif "	"# any comments about image files (can say its missing if you no longer have it)"	"130520_Neural_Rosettes.tif"	"LaminB1"	"Manual (Nessys Editor)"
