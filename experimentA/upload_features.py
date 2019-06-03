@@ -10,6 +10,10 @@ import pandas as pd
 
 import omero.clients
 import omero.cli
+from omero.rtypes import (
+    rstring,
+    unwrap,
+)
 from omero_upload import upload_ln_s
 
 DRYRUN = False
@@ -93,7 +97,7 @@ def main(conn):
             errors.append('No segmentation found for {}'.format(im.name))
             continue
 
-        if seg in existing:
+        if os.path.basename(seg) in existing:
             print('Skipping {} ➔ {}'.format(seg, im.name))
             continue
 
@@ -123,13 +127,14 @@ def main(conn):
 
         print('Uploading {} ➔ {}'.format(features, ds.name))
         if not DRYRUN:
-            fo = conn.c.upload(features, 'text/tab-separated-values')
+            fo = conn.c.upload(features, type='text/tab-separated-values')
             fa = omero.model.FileAnnotationI()
-            fa.setFile(fo._obj)
-            fa.setNs(omero.rtypes.rstring(NAMESPACE))
-            fa = conn.getUpdateService().saveAndReturnObject(fa)
-            fa = omero.gateway.FileAnnotationWrapper(conn, fa)
-            ds.linkAnnotation(fa)
+            fa.setFile(omero.model.OriginalFileI(fo.id, False))
+            fa.setNs(rstring(NAMESPACE))
+            link = omero.model.DatasetAnnotationLinkI()
+            link.setParent(ds._obj)
+            link.setChild(fa)
+            link = conn.getUpdateService().saveAndReturnObject(link)
 
 
 if __name__ == '__main__':
