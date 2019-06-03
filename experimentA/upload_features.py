@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# coding: utf-8
 
 # WARNING: This script will use your current OMERO login session if one
 # exists. If you want to use a different login ensure you logout first.
