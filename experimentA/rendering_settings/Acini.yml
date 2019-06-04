@@ -1,0 +1,20 @@
+---
+channels:
+    1:
+        active: false
+        color: FF0000
+        label: Oct6
+    2:
+        active: true
+        color: 0000FF
+        label: LaminB1
+    3:
+        active: true
+        color: FFFF00
+        label: Dapi
+    4:
+        active: false
+        color: 00FF00
+        label: gamma-tubulin
+greyscale: false
+version: 2

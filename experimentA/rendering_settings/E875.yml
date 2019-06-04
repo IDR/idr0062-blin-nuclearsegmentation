@@ -1,0 +1,20 @@
+---
+channels:
+    1:
+        active: true
+        color: FFFF00
+        label: Dapi
+    2:
+        active: false
+        color: FF0000
+        label: Tcf15-venus
+    3:
+        active: false
+        color: 00FF00
+        label: gammaTubulin
+    4:
+        active: false
+        color: 0000FF
+        label: LaminB1
+greyscale: false
+version: 2

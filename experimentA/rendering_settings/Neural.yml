@@ -1,0 +1,16 @@
+---
+channels:
+    1:
+        active: true
+        color: 00FF00
+        label: GammaTubulin
+    2:
+        active: true
+        color: 0000FF
+        label: LaminB1
+    3:
+        active: true
+        color: FFFF00
+        label: Dapi
+greyscale: false
+version: 2
