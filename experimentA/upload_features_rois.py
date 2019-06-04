@@ -130,8 +130,11 @@ def create_rois(im, labels):
     """
     nz = im.getSizeZ()
     assert im.getSizeT() == 1
-    assert all(np.equal(labels.shape,
-                        [im.getSizeZ(), im.getSizeY(), im.getSizeX()]))
+    if not all(np.equal(labels.shape,
+               [im.getSizeZ(), im.getSizeY(), im.getSizeX()])):
+        raise ValueError(
+            'Incompatible ZYX dimensions image:{} labels:{}'.format(
+                [im.getSizeZ(), im.getSizeY(), im.getSizeX()], labels.shape))
 
     rois = []
     ulabels = np.unique(labels)
@@ -230,6 +233,8 @@ def main(conn):
                 save_rois(conn, im, rois)
         except KeyError:
             print('No segmentation found for {}'.format(im.name))
+        except ValueError as e:
+            print('ERROR in {}: {}'.format(im.name, e))
 
 
 if __name__ == '__main__':
