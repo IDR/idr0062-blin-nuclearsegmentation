@@ -13,7 +13,7 @@ channels:
         color: 00FF00
         label: gammaTubulin
     4:
-        active: false
+        active: true
         color: 0000FF
         label: LaminB1
 greyscale: false

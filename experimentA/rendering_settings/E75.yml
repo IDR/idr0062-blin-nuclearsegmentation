@@ -2,11 +2,11 @@
 channels:
     1:
         active: true
-        color: FF0000
+        color: 0000FF
         label: LaminB1
     2:
         active: true
-        color: 00FF00
+        color: FFFF00
         label: Dapi
 greyscale: false
 version: 2
