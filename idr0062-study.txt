@@ -19,8 +19,7 @@ Study Public Release Date
 # Study Publication																																																												
 Study PubMed ID																																																													
 Study Publication Title	NesSys: a novel method for accurate nuclear segmentation in 3D																																																											
-Study Author List	Guillaume Blin, Daina Sadurska, Rosa Portero Migueles, Naiming Chen, Julia A. Watson,
-Sally Lowell																																																											
+Study Author List	Guillaume Blin, Daina Sadurska, Rosa Portero Migueles, Naiming Chen, Julia A. Watson, Sally Lowell																																																											
 Study PMC ID																																																														
 Study DOI																																																													
 																																																												
