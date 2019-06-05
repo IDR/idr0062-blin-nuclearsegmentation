@@ -66,6 +66,10 @@ columns:
         - name: Comment [Gene Identifier]
           clientname: Gene Identifier
           include: yes
+        - name: Comment [Gene Identifier]
+          clientname: Gene Identifier URL
+          clientvalue: http://www.ensembl.org/id/{{ value|urlencode }}
+          include: yes
         - name: Comment [Gene Symbol]
           clientname: Gene Symbol
           include: yes
