@@ -33,6 +33,9 @@ columns:
   - name: Experimental Condition [Genotype]
     clientname: Genotype
     include: yes
+  - name: Comment [Genotype]
+    clientname: Genotype Comment
+    include: yes
   - name: Comment [Experiment]
     clientname: Experiment Comment
     include: yes
