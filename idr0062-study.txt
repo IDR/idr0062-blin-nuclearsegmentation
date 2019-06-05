@@ -4,7 +4,7 @@
 # Section with generic information about the study including title, description, publication details (if applicable) and contact details																																																												
 																																																												
 Comment[IDR Study Accession]	idr0062																																																											
-Study Title	Nessys: a new set of tools for the automated detection of nuclei within intact tissues and dense 3D cultures																																																											
+Study Title	NesSys: a new set of tools for the automated detection of nuclei within intact tissues and dense 3D cultures																																																											
 Study Type	image segmentation																																																											
 Study Type Term Source REF	NCIT																																																											
 Study Type Term Accession	NCIT:C80146																																																											
