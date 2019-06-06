@@ -8,6 +8,8 @@ channels:
         active: true
         color: 0000FF
         label: LaminB1
+        start: 0
+        end: 2000
     3:
         active: true
         color: FFFF00

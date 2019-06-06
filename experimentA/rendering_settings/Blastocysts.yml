@@ -4,9 +4,13 @@ channels:
         active: true
         color: 0000FF
         label: LaminB1
+        start: 0
+        end: 1500
     2:
         active: true
         color: FFFF00
         label: Dapi
+        start: 0
+        end: 1500
 greyscale: false
 version: 2
