@@ -1,4 +1,4 @@
 "Source Name"	"Assay Name"	"Dataset Name"	"Image File"	"Comment [Image File Path]"	"Comment [Image File Comments]"	"Segmented Image"	"Segmented Channel"	"Segmentation Method"
-"E875_Zone1_Manual.tif"	"E8.75"	"DISCEPTS"	"E875_Zone1_Manual.tif"	"/E875/E875_Zone1_Manual.tif"	"# any comments about image files (can say its missing if you no longer have it)"	"E875_Zone1.tif"	"LaminB1"	"Manual (Nessys Editor)"
-"E875_Zone2_Manual.tif"	"E8.75"	"DISCEPTS"	"E875_Zone2_Manual.tif"	"/E875/E875_Zone2_Manual.tif"	"# any comments about image files (can say its missing if you no longer have it)"	"E875_Zone2.tif"	"LaminB1"	"Manual (Nessys Editor)"
-"E875_Zone3_Manual.tif"	"E8.75"	"DISCEPTS"	"E875_Zone3_Manual.tif"	"/E875/E875_Zone3_Manual.tif"	"# any comments about image files (can say its missing if you no longer have it)"	"E875_Zone3.tif"	"LaminB1"	"Manual (Nessys Editor)"
+"E875_Zone_1_Manual.tif"	"E8.75"	"DISCEPTS"	"E875_Zone_1_Manual.tif"	"/E875/E875_Zone_1_Manual.tif"	"# any comments about image files (can say its missing if you no longer have it)"	"E875_Zone_1.tif"	"LaminB1"	"Manual (Nessys Editor)"
+"E875_Zone_2_Manual.tif"	"E8.75"	"DISCEPTS"	"E875_Zone_2_Manual.tif"	"/E875/E875_Zone_2_Manual.tif"	"# any comments about image files (can say its missing if you no longer have it)"	"E875_Zone_2.tif"	"LaminB1"	"Manual (Nessys Editor)"
+"E875_Zone_3_Manual.tif"	"E8.75"	"DISCEPTS"	"E875_Zone_3_Manual.tif"	"/E875/E875_Zone_3_Manual.tif"	"# any comments about image files (can say its missing if you no longer have it)"	"E875_Zone_3.tif"	"LaminB1"	"Manual (Nessys Editor)"
