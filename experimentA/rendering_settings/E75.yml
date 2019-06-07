@@ -1,0 +1,16 @@
+---
+channels:
+    1:
+        active: true
+        color: 0000FF
+        label: LaminB1
+        start: 0
+        end: 2000
+    2:
+        active: true
+        color: FFFF00
+        label: Dapi
+        start: 0
+        end: 2000
+greyscale: false
+version: 2
