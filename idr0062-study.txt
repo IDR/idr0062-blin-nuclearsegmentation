@@ -14,7 +14,7 @@ Study Organism Term Source REF	NCBITaxon
 Study Organism Term Accession	10090																																																											
 Study Experiments Number	1																																																											
 Study External URL	https://framagit.org/pickcellslab/nessys																																																											
-Study Public Release Date																																																												
+Study Public Release Date	2019-06-17																																																											
 																																																												
 # Study Publication																																																												
 Study PubMed ID																																																													
