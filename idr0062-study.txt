@@ -17,11 +17,11 @@ Study External URL	https://framagit.org/pickcellslab/nessys
 Study Public Release Date	2019-06-17																																																											
 																																																												
 # Study Publication																																																												
-Study PubMed ID																																																													
+Study PubMed ID	31398189																																																													
 Study Publication Title	NesSys: a novel method for accurate nuclear segmentation in 3D																																																											
 Study Author List	Blin G, Sadurska D, Migueles RP, Chen N, Watson JA, Lowell S																																																											
-Study PMC ID																																																														
-Study DOI																																																													
+Study PMC ID	PMC6703695																																																														
+Study DOI	https://doi.org/10.1371/journal.pbio.3000388																																																													
 																																																												
 # Study Contacts																																																												
 Study Person Last Name	Blin																																																											
