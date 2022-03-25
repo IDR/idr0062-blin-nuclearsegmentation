@@ -30,11 +30,8 @@ def iter_rois(roi_service, dataset):
 
 
 def delete_tables(conn, dataset):
-    to_delete = []
     for ann in dataset.listAnnotations(ns="openmicroscopy.org/omero/bulk_annotations"):
-        to_delete.append(ann.getId())
-    if to_delete:
-        conn.deleteObjects('Annotation', to_delete, wait=True)
+        conn.deleteObject(ann._obj)
 
 
 def populate_metadata(conn, target_obj, file_path, column_types):
