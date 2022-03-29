@@ -25,8 +25,7 @@ def iter_rois(roi_service, dataset):
     for image in dataset.listChildren():
         result = roi_service.findByImage(image.getId(), None)
         for roi in result.rois:
-            for shape in roi.copyShapes():
-                yield image, roi, shape
+            yield image, roi
 
 
 def delete_tables(conn, dataset):
@@ -34,9 +33,9 @@ def delete_tables(conn, dataset):
         conn.deleteObject(ann._obj)
 
 
-def populate_metadata(conn, target_obj, file_path, column_types):
+def populate_metadata(target_obj, file_path, column_types):
     ctx = ParsingContext(
-        conn.c, target_obj._obj, file=file_path, allow_nan=True,
+        target_obj._conn.c, target_obj._obj, file=file_path, allow_nan=True,
         table_name=TABLE_NAME, column_types=column_types
     )
     ctx.parse()
@@ -71,27 +70,23 @@ def handle_dataset(conn, dataset_id):
     features_table = get_features_table(dataset)
     column_types = get_column_types(features_table)
     features_table["roi"] = -1
-    features_table["shape"] = -1
     features_table["Image Name"] = "NA"
     column_types.append("roi")
-    column_types.append("l")
     column_types.append("s")
-    for img, roi, shape in iter_rois(roi_service, dataset):
+    for img, roi in iter_rois(roi_service, dataset):
         label = float(f"{roi._name._val}.0")
         if "Image_Name" in features_table:
             img_name = img.getName().replace(".tif", ".ids")
             features_table.loc[(features_table['Image_Name'] == img_name) & (features_table['label'] == label), 'roi'] = roi._id._val
-            features_table.loc[(features_table['Image_Name'] == img_name) & (features_table['label'] == label), 'shape'] = shape._id._val
             features_table.loc[(features_table['Image_Name'] == img_name) & (features_table['label'] == label), 'Image Name'] = img.getName()
         else:
             features_table.loc[(features_table['label'] == label), 'roi'] = roi._id._val
-            features_table.loc[(features_table['label'] == label), 'shape'] = shape._id._val
             features_table.loc[(features_table['label'] == label), 'Image Name'] = img.getName()
     features_table.drop(features_table[(features_table.roi == -1)].index, errors = 'ignore', inplace=True)
     tmp_file = "/tmp/tmp.csv"
     features_table.to_csv(tmp_file, sep=',', encoding='utf-8', index=False)
     print("Create table")
-    populate_metadata(conn, dataset, tmp_file, column_types)
+    populate_metadata(dataset, tmp_file, column_types)
 
 
 def main():
